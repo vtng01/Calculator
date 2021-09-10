@@ -2,13 +2,15 @@ import java.util.Random;
 import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
-        Random random = new Random();
-        int ran1 = random.nextInt(100);
-        int ran2 = random.nextInt(100);
-        System.out.println("The two randomly generated numbers are: "
-        + ran1 + ", "+ ran2);
-        System.out.println("Please enter operation: +, *, -");
+
+        // Random random = new Random();
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter two numbers");
+        int ran1 = Integer.valueOf(scanner.nextLine());
+        int ran2 = Integer.valueOf(scanner.nextLine());
+
+        System.out.println("Please enter operation: +, *, -");
+
         String input = scanner.nextLine();
 
         System.out.print("The result is: ");
@@ -24,6 +26,7 @@ public class Calculator {
         if (input.equals("-")) {
             System.out.println(ran1 - ran2);
         }
+
 
     }
 
